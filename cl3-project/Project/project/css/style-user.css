@@ -1,0 +1,121 @@
+body{
+    font-family: "Josefin Sans";
+    width:97%;
+    height:97%;
+    background-image:linear-gradient(to right bottom,rgba(105, 248, 38, 0.6),rgba(85, 216, 25, 0.7)),url(image2.jpg); 
+    position: relative;
+    background-position:top;
+    background-size: cover;
+    background-repeat: no-repeat; 
+    padding: 10px;
+    margin:0px;
+}
+
+.con-right-panel{
+    left:0px;
+    top:0px;
+    width:600px;
+    height: 100%;
+    background-color: #fff;
+    position: relative;
+    box-shadow: 0 0 10px rgba(53, 51, 51,0.753);
+}
+
+.con-right-panel-id{
+    position: absolute;
+    left:1%;
+}
+
+.con-right-panel-image{
+    position: absolute;
+    top:30%;
+    left:50%;
+    width:250px;
+    height: 250px;
+    transform: translate(-50%,-50%);
+}
+.con-right-panel-image-button{
+    padding: 0px;
+    border: none;
+    border-radius: 0%;
+}
+.con-right-panel-image-button:active{
+    border: none;
+    transform: translate(0px,0px);
+}
+
+.con-right-panel-image-button-img{
+    width:250px;
+    height:250px;
+}
+
+.con-right-panel-info{
+    position: absolute;
+    top:55%;
+    width:96%;
+    height:270px;
+    margin: 10px;
+    border: 1px solid;
+    padding-top:4px; 
+}
+.con-right-panel-info-input{
+    display: block;
+    margin: 4px;
+    margin-left:20px;
+    border: none;
+    width: 93%;
+    border-bottom:2px solid;  
+    background-color: #fff;
+}
+
+.con-right-panel-info-input:hover{
+    border-bottom:2px solid rgb(40, 190, 165);
+}
+.con-right-panel-info-label{
+    margin-left:20px;
+}
+
+.con-right-panel-info-buttongroup{   
+    top:70%;
+    text-align: center;
+}
+
+.con-right-panel-info-buttongroup-button{
+    display: inline-block;
+    margin-top:10px;
+    border: none;
+    border-radius:3px;
+    height:50px;
+    width: 80px; 
+    color: #fff;
+    margin-right: 3px;
+}
+
+.con-right-panel-info-buttongroup-button:hover{
+    transform: translate(0,2px);
+}
+
+.btn-add{
+    background-color: rgb(39, 214, 23);
+}
+
+.btn-modify
+{
+    background-color: rgb(23, 214, 214);
+}
+
+.btn-delete
+{
+    background-color: rgb(214, 29, 23);
+}
+
+.con-left-panel{
+    position: absolute;
+    top:0px;
+    left:620px;
+    width: 680px;
+    margin-top:10px; 
+    height: 97%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(53, 51, 51,0.753);
+}

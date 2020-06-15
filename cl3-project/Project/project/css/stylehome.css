@@ -1,0 +1,73 @@
+.body{
+    background-image:url("a.jpg") !important;
+    background-position: top;
+    background-size:cover; 
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    overflow: hidden;
+}
+
+.rounded{
+margin-top:12%;
+height:380px;
+backface-visibility: hidden;
+padding-bottom: 2px;  
+}
+#login-head{
+    font-size: 30px;
+    font:bold;
+}
+#login-panel{
+    padding: 3px;
+    margin:2px;
+    height:200px;
+}
+#form-control
+{
+    margin-top:3px;
+}
+label{
+
+    font: small;
+  
+}
+.inbtn{
+    margin-bottom: 10px;
+
+}
+
+#login{
+    transition: all .2s;
+}
+#login:hover{
+    box-shadow: 0 0 10px #eee !important;
+}
+
+.anim-box{
+    background-color: #4a4a4c !important;
+    background-image: none !important;
+    transition: all .2s !important;
+    animation: box-anim 1s ease-in;
+    animation-direction: alternate;
+}
+
+@keyframes box-anim{
+    0%{
+        opacity: 0;
+    }
+    25%{
+
+    }
+    50%{
+        
+    }
+    75%{
+
+    }
+    100%{
+        opacity: 1;
+    }
+}
+

@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Login page</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/stylehome.css">
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/jquery.min.js"></script>
+        <link rel="icon" href="../favicon.ico" type="image/x-icon"/>
+        <link rel="stylesheet" href="../css/heading-font.css"/>
+        <script src="../js/login-page.js"></script>
+    </head>
+    <body class="body">
+        <div class="container" id="main-container">
+            <div class="row" id="con-row">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4 shadow p-3 mb-5 bg-white rounded" id="login">
+                    <div id="login-panel">
+                        <div class="login-head"><center><h3>Login</h3></center></div>
+                            <div id="login-content" class="form-group">
+                            
+                                    <label for="user">Enter Username</label>
+                                    <input type="text" class="form-control" id="username" name="username" placeholder="Enter Username">
+                                    <label for="user">Enter Password</label>
+                                    <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password">
+                                    <label for="type">Type of user</label>
+                                    <select type="text" class="form-control" id="type">
+                                        <option value="Admin">Admin</option>
+                                        <option value="User">User</option>
+                                        <option value="Head">Head</option>
+                                    </select>
+                                    <br>
+                                    <button class="btn btn-md btn-primary form-control inbtn" id="btnsubmit" name="submit" onclick="btnlogin();">Submit</button>
+                                  <center> <a href="register-user.html" style="text-decoration: none;">New user, click here</a></center>
+                            </div>
+                    </div>
+                </div>
+                <div class="col-sm-4"></div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-image:linear-gradient(to right bottom,rgba(105, 248, 38, 0.6),rgba(85, 216, 25, 0.7)),url(image1.jpg); 
+    position: relative;
+    background-position:top;
+    background-size: cover;
+    background-repeat: no-repeat; 
+    padding: 0px;
+    margin:0px;
+    font-family: 'Lato', sans-serif;
+}
+
+.inner-col{
+    margin: 5px;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: all .2s;
+    padding: 10px;
+}
+
+.inner-col:hover{
+    box-shadow: 0 0 8px #000;
+}
+
+.heading{
+    text-align: center;
+}
+
+.inner-col-content-date{
+    float: right;
+}

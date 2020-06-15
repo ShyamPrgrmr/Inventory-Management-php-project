@@ -1,0 +1,54 @@
+*{
+box-sizing: border-box;
+padding: 0px;
+
+}
+
+
+body{
+    background-image:url("back.jpg") !important;
+    background-position: top;
+    background-size:cover; 
+}
+
+.card-deck{
+margin-top:20px;
+}
+
+.card{
+    height:100px;
+    transition: all .2s;
+}
+
+.card:hover{
+    box-shadow: 0 0 10px #eee !important;
+}
+
+.container{
+    padding:10px;
+   padding-top:15% !important; 
+}
+
+.card-body{
+    padding-top:10% !important;
+}
+
+.head{
+    padding: 10px;
+    background-color: #fff;
+    font-weight: 100;
+    border-radius: 8px;
+}
+
+.s1{
+    animation: ltr .8s ease-in;
+}
+
+@keyframes ltr{
+    0%{
+        transform: translate(-30px) !important;
+    }
+    100%{
+        transform: translate(0px) !important;
+    }
+}

@@ -1,0 +1,149 @@
+<html>
+    <head>
+        <title>User management</title>
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/user.css">
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/user-management.js"></script>
+        <link rel="icon" href="../favicon.ico" type="image/x-icon"/>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="../css/heading-font.css">
+        <link rel="stylesheet" href="../css/for-all.css">
+    </head>
+    <body>
+        <body>
+            <div class="container-fluid">
+                <div class="row">
+                        <nav class="navbar fixed-top navbar-light bg-light">
+                            <a class="navbar-brand">Inventory Management</a>    
+                        </nav>
+                </div>
+                <div class="row main-row">
+                    <div class="col-sm-5  left-panel">
+                        <div class="row">
+                            <div class="col-sm-12">
+                            <div class="left-top shadow">
+                                <div class="heading">
+                                    <h2>User management</h2>
+                                </div>
+                                <div class="form-group">
+                                    
+                                    <div class="name row">
+                                        <div class="col-sm-6 inner-col">
+                                            <label for="u-f-name">First name</label>
+                                            <input placeholder="First name" class="form-control" type="text" name='u-f-name' id="fname">
+                                        </div>
+                                        <input type="text" hidden id="uid">
+                                        <div class="col-sm-6 inner-col">
+                                            <label for="u-l-name">Last name</label>
+                                            <input class="form-control" placeholder="last name" type="text" name='u-l-name' id="lname">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="name row">
+                                        <div class="col-sm-3 inner-col">
+                                            <label for="u-gender">Gender</label>
+                                            <select class="form-control" type="text" id="gender" name='u-gender'>
+                                                <option value="male">Male</option>
+                                                <option value="female">Female</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <div class="col-sm-3 inner-col">
+                                                <label for="u-gender">Department</label>
+                                                <select class="form-control" type="text" name='u-department' id="department">
+                                                </select>
+                                        </div>
+
+                                        <div class="col-sm-6 inner-col">
+                                            <label for="mobile">Mobile</label>
+                                            <input class="form-control" placeholder="Mobile" type="text" name="mobile" id="mobile">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="name row">
+                                        <div class="col-sm-6 inner-col">
+                                            <label for="u-b-date">Date of birth</label>
+                                            <input type="date" class="form-control" name="u-b-date" id="dob">
+                                        </div>
+                                        <div class="col-sm-6 inner-col">    
+                                            <label for="u-b-date">Joining date</label>
+                                            <input type="date" id="doj" class="form-control" name="u-b-date">
+                                        </div>
+                                    </div>
+
+                                    <div class="name row">
+                                        <div class="col-sm-4 inner-col">
+                                            <label for="u-city">City</label>
+                                            <input placeholder="Enter city name" id="city" class="form-control" type="text">
+                                        </div>
+                                        <div class="col-sm-4 inner-col">
+                                            <label for="u-state">State</label>
+                                            <input class="form-control" id="state" placeholder="Enter name" type="text">
+                                        </div>
+                                        <div class="col-sm-4 inner-col" for="u-zip">
+                                            <label>Zip</label>
+                                            <input class="form-control" id="zip" type="text" placeholder="Enter state name">
+                                        </div>
+                                    </div>
+                                    <div class="btn-gr">
+                                        <button class="btn btn-md btn-success" onclick="save_user();">Save</button>
+                                        <button class="btn btn-md btn-primary" onclick="edit_user();">Edit</button>
+                                        <button class="btn btn-md btn-danger">Delete</button>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-sm-7">
+                        <div class="row h-100">
+                            <div class="col-sm-12">
+                                <div class="right-top shadow">
+                                    <div class="heading"><h2>List of users</h2></div>
+                                    <div class="search_user">
+                                        <div class="row">
+                                            <div class="col-sm-10">
+                                                <div class="form-group">
+                                                   <!-- <div style="text-align: center;"><label for="searchkey">Enter Name of user to search</label></div>-->
+                                                    <input type="text" class="form-control" id="searchkey" placeholder="Type name,did,uid of user"/> 
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <label></label>
+                                                <button class="btn btn-md btn-primary no-anim" onclick="search_user();">Search!</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="table-responsive">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <th>#</th>
+                                            <th>User Id</th>
+                                            <th>Dept. Id</th>
+                                            <th>Name</th>
+                                            <th>DOB</th>
+                                            <th>Joining date</th>
+                                            <th>Mobile</th>
+                                            <th>Action</th>
+                                        </thead>
+                                        <tbody id="user-table">
+
+                                        </tbody>
+                                    </table>
+                                    </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div> 
+                
+                
+            
+            </div>
+        </body>
+    </body>
+</html>

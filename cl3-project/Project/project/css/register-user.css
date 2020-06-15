@@ -1,0 +1,21 @@
+body{
+    position: relative;
+    background-image: linear-gradient(to right bottom,rgba(64, 223, 43, 0.63),rgba(64, 223, 43, 0.63)),url("image1.jpg");
+    background-position: top;
+    background-size:cover; 
+    font-family: 'Lato';
+}
+.form-group{
+    position: absolute;
+    top:350px;
+    left:50%;
+    width: 400px;
+    padding:10px;
+    background-color: #eee;
+    transform: translate(-50%,-50%);
+    border-radius: 8px;
+}
+
+.form-group:hover{
+    box-shadow: 0 0 10px #eee;
+}

@@ -1,0 +1,132 @@
+body{
+    padding: 3px;
+    background-image: linear-gradient(to top right,rgba(116, 203, 101,0.7),rgba(111, 220, 122,0.7)),url(image.jpg);
+    background-position: top;
+    background-size:cover; 
+}
+
+.textbox{
+    height:900px;
+    position:relative;
+  
+}
+
+.animation{
+    position:absolute;
+    top:30%;
+    left:45%;
+    transform: translate(-40%,-10%);
+    backface-visibility: hidden;
+}	
+.animation-top-first{
+    color: white;
+    display: block;
+    font-size: 60PX;
+    font-weight: 700;
+    letter-spacing: 40px;
+    animation: lefttoright 1s ease-out;
+}
+.animation-top-second{
+    color:white;
+    display: block;
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 1.8px;
+    animation: righttoleft 1s ease-in;
+}
+.animation-top-second-div
+{
+    text-align: center;
+    display: block;
+    animation: bottomtotop 0.7s ease-in;
+    
+}
+.animation-top-second-div-button
+{	
+    margin-top:30px;
+    width:170px;
+    height: 40px;
+    border-radius: 20px;
+    color: black;
+    background-color: white;
+    border:none;
+    transition: all .4s;
+}
+.animation-top-second-div-button:hover{
+    
+    animation: buttontexture 1s ease-out;
+    box-shadow: 0px 0px 20px #fff;
+    animation-iteration-count: infinite;
+    transform: translate(0,-10px);
+   
+}
+
+.animation-top-second-div-button:active{
+    transform: translate(0,-5px);  
+}
+.animation-top-second-div-button-a{
+    color: black;
+    text-decoration: none;
+}  
+
+.animation-top-second-div-button-a:hover{
+    text-decoration: none;
+    color: #000;
+}
+
+@keyframes lefttoright{
+    0%{
+        transform: translate(-100px);
+        opacity: 0;
+    }
+    80%{
+        transform: translate(20px);
+    }
+    100%{
+        transform: translate(0px);
+        opacity:1;
+    }
+}
+@keyframes righttoleft{
+    0%{
+        transform: translate(100px);
+        opacity: 0;
+    }
+    80%{
+        transform: translate(-20px);
+    }
+    100%{
+        transform: translate(0px);
+        opacity:1;
+    }
+
+}
+@keyframes bottomtotop{
+    0%{
+        transform: translate(0px,100px);
+        opacity: 0;
+    }
+    
+    100%{
+        transform: translate(0px,0px);
+        opacity:1;
+    }
+}
+@keyframes buttontexture{
+    0%{
+
+        box-shadow: 00px 0px 30px #000;
+    }
+    25%{
+        box-shadow: 0px 0px 20px #000;
+    }
+    50%{
+        box-shadow: 0px 0px 5px #000;
+    }
+    75%{
+        box-shadow: 0px 0px 20px #000;
+    }
+    100%{
+        box-shadow: 0px 0px 30px #000;
+    }
+}

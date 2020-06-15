@@ -1,0 +1,159 @@
+<html>
+    <head>
+        <title>User Panel</title>
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/user-side-panel.css">
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/user-site-panel.js"></script>
+        <link rel="stylesheet" href="../css/for-all.css">
+        <link rel="stylesheet" href="../css/font-awesome.css">
+        <link rel="icon" href="../favicon.ico">
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+                        <nav class="navbar fixed-top navbar-light bg-light">
+                                <a class="navbar-brand">Inventory Management</a>    
+                            </nav>
+                </div>
+            </div>
+            <div class="row main-row">
+                <div class="col-sm-5">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="inner-col">
+                                <div class="heading">
+                                    <h2>Indent raising</h2>
+                                </div>
+                                <div class="inner-col-container">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                    <label for="did">Department name</label>
+                                                    <input type="text" class="form-control" disabled id="d">
+                                            </div>
+                                            <div class="col-sm-6">
+                                                    <label for="uid">user name</label>
+                                                    <input type="text" class="form-control" disabled id="u">
+                                            </div>
+                                            <input type="text" hidden id="inid">
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <label for="Item id">Select item id</label>
+                                                <select class="form-control" id="item_id" onchange="loaditemdata(this.value)">
+                                                    <option></option>
+                                                </select>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <label for="item-name">Item name</label>
+                                                <input type="text" id="item_name" class="form-control" disabled>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <label for="item-description">Item description</label>
+                                                <textarea name="" id="item_desc" style="resize: none" disabled class="form-control"></textarea>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                    <label for="item-description">hazard</label>
+                                                    <textarea name="" id="item_hazard" style="resize: none" disabled class="form-control"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <label for="state">State of item</label>
+                                                <input type="text" class="form-control" id="item_state" disabled/>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <label>Manufacturer</label>
+                                                <input type="text" class="form-control" id="item_manu" disabled/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                    <label for="qunatity">Qunatinty <small>in kg.</small></label>
+                                                    <input class="form-control" id="item_qty" type="number">
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <label for="">Reason for indent</label>
+                                                <textarea id="in_reason" class="form-control" style="resize: none;"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                        <div class="col-sm-12">                                            
+                                            <div class="btn-gr">
+                                                <button class="btn btn-success" onclick="save_indent();">Save</button>
+                                                <button class="btn btn-danger" onclick="deleteindent();">Delete</button>
+                                                <button class="btn btn-secondary" onclick="clear_function()">Clear</button>
+                                            </div>
+                                        </div>
+                                        </div>
+                                        
+                                    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-sm-7 ">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="inner-col">
+                                    <div class="heading">
+                                        <h2>Status of all indents</h2>
+                                    </div>
+                                    <div class="table-responsive right-colum">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <th>#</th>
+                                                <th>Indent id</th>
+                                                <th>Item id</th>
+                                                <th>Raising date</th>
+                                                <th>Expiry date</th>
+                                                <th>Quantity</th>
+                                                <th>Status</th>
+                                                <th>Action</th>
+                                            </thead>
+                                            <tbody id="table_body"></tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+
+<!-- <div class="heading">
+<h2>Messages</h2>
+</div>
+<div class="message-content">
+<div class="list-group">
+    <div class="list-group-item">
+        <div class="list-group-container">
+            <div class="list-group-message">Mr. M. Kavilkar</div>
+            <button type="button" id="messageid" class="list-group-button btn no-anim caret">&#9993;</button>
+            
+            <div class="the-message"><p style="text-align: justify;">Hello steve,
+                how to study like pro. efwfewfwf
+                fwef wqwefef wfwefwe fewfw fw fwe fwefewf efw fw fwfw fwfew
+                fwfwfwefwfwf
+                fwfweffwffeff
+                wffwffwfw
+                fwefwefwef
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>-->

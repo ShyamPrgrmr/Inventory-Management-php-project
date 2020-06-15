@@ -1,0 +1,111 @@
+<html>
+    <head>
+            <title>Department Management</title>
+            <link rel="stylesheet" href="../css/bootstrap.min.css">
+            <link rel="stylesheet" href="../css/dept.css">
+            <script src="../js/jquery.min.js"></script>
+            <script src="../js/bootstrap.min.js"></script>
+            <script src="../js/dept.js"></script>
+            <link rel="icon" href="../favicon.ico" type="image/x-icon"/>
+            <link rel="stylesheet" href="../css/for-all.css">
+    </head>
+    <body>
+        <div class="container-fluid">
+            
+            <div class="row">
+                <nav class="navbar fixed-top navbar-light bg-light">
+                    <a class="navbar-brand">Inventory Management</a>    
+                </nav>
+            </div>
+            <div class="row h-100">
+                
+                <div class="col-sm-5 right-panel right">
+                    <div class="row">
+                        <div class="col-sm-12 left-top">
+                            <div class="department-info">
+                                <h2 class="heading">Manage department</h2>
+                                <div class="form-group">
+                                    <label for="dept-name">Department name</label>
+                                    <input type="text" id="dept-name" class="form-control" name="dept-name">
+                                    <label for="dept-info">Department type</label>
+                                    <input type="text" id="dept-type" name="dept-info" class="form-control">
+                                    <label for="no-emp">Number of employee</label>
+                                    <input type="text" id="no-emp" name='no-employee' class="form-control">
+                                    <label for="head-id">Department head name</label>
+                                    <input type="text" name="head-id" id="head-id" class="form-control" disabled>
+                                    <input type="text" id="did" hidden>
+                                    <div class="button-group">
+                                        <button class="btn btn-success" onclick="save()">Save</button>
+                                        <button class="btn btn-info" onclick="updatedept()">edit</button>
+                                        <button class="btn btn-danger" onclick="deletedept()">delete</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 30px;">
+                        <div class="col-sm-12 right-panel">
+                            <div class="department-head-list">
+                                <div class="heading">
+                                    <h2 class="heading-head-h">Heads of department</h2>
+                                </div>
+
+                                <div class="form-group head-menu">
+                                    <label>Select department</label>
+                                    <select  class="form-control" id="seldept" onchange="loaduser(this.value);"></select>
+                                    <label>Select user</label>
+                                    <select class="form-control" id="seluser"></select>
+                                    <div class="btn-gr">
+                                        <button class="btn-success btn form-control no-anim" onclick="savehead();">Save</button>
+                                    </div>
+                                </div>
+
+                                <div class="table-responsive">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <th>#</th>
+                                            <th>Id</th>
+                                            <th>Did</th>
+                                            <th>Name</th>
+                                            <th>contact</th>
+                                        </thead>
+                                        <tbody id="list-head"></tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-7">
+                    <div class="row left-panel right">
+                        <div class="col-sm-12">
+                            <div class="department-list">
+                                <div class="heading">
+                                    <h2 class="department-list-heading-h">List of departments</h2>
+                                </div>
+                                <div class="department-list-content">
+                                    <div class="table-responsive table-wrapper-scroll-y my-custom-scrollbar">
+                                        <table class="table table-striped ">
+                                            <thead>
+                                                <th>#</th>
+                                                <th>id</th>
+                                                <th>Name</th>
+                                                <th>Type</th>
+                                                <th>Number of Employees</th>
+                                                <th>Action</th>
+                                            </thead>
+                                            <tbody id="department-table-body">
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,153 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" href="../favicon.ico">
+        <title>Warehouse allocation</title>
+        <link rel="stylesheet" href="../css/warehouse-allocation.css">
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/for-all.css">
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/ware-house-allocation.js"></script>
+        <link rel="stylesheet" href="../css/heading-font.css">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="inner-col">
+                                <div class="heading">
+                                    <h2>Warehouse allocation</h2>
+                                </div>
+                                <div class="inner-col-content">
+                                    <div class="row"><div class="col-sm-12"> <p class="inner-col-content-date"></p></div></div>
+                                    <div class="form-group">
+                                    <div class="row">
+                                            <div class="col-sm-6">
+                                                <label for="Item id">Select item id</label>
+                                                <select class="form-control" id="item-id" onchange="loaditemdata(this.value);">
+                                                    <option></option>
+                                                </select>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <label for="item-name">Item name</label>
+                                                <input type="text" class="form-control" id="item-name" disabled>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <label for="item-description">Item description</label>
+                                                <textarea name="" id="item-desc" style="resize: none" disabled class="form-control"></textarea>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                    <label for="item-hazard">hazard</label>
+                                                    <textarea name="" id="item-hazard" style="resize: none" disabled class="form-control"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <label for="item-state">State of item</label>
+                                                <input type="text" class="form-control" id="item-state" disabled/>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <label>Manufacturer</label>
+                                                <input type="text" id="item-manu" class="form-control" disabled/>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <label for="">Item quantity</label>
+                                                <input type="number" name="" id="item-qty" class="form-control">
+                                            </div>
+                                            <div class="col-sm-6"></div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <label for="warehouse-no">
+                                                    Warehouse Id.
+                                                </label>
+                                                <select class="form-control" id="warehouse-id" onchange="warehouse_option_change(this.value);">
+                                                    <option></option>
+                                                </select>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <label for="warehouse-name" disabled>Warehouse name</label>
+                                                <input type="text" class="form-control" id="ware-name" disabled/>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <label for="">Wrarehouse total capacity</label>
+                                                <input type="text" class="form-control" id="ware-capa" disabled>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                   
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <label for="">Rack Id.</label>
+                                                <select class="form-control" id="rack-id" onchange="load_rack_info(this.value);">
+                                                    <option></option>
+                                                </select>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <label for="">Rack name</label>
+                                                <input type="text" class="form-control" id="rack-name" disabled>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <label for="">Rack capacity</label>
+                                                <input class="form-control" type="number" id="rack-capa" disabled/>
+                                            </div>
+                                            <div class="col-sm-6">
+                                             </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="btn-gr">
+                                                    <button class="btn btn-success" onclick="allocate()">Allocate</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="inner-col">
+                                <div class="heading">
+                                    <h2>Allocated item</h2>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-bordered">
+                                        <thead>
+                                            <th>#</th>
+                                            <th>Allocation id</th>
+                                            <th>Warehouse id</th>
+                                            <th>Rack id</th>
+                                            <th>Item id</th>
+                                            <th>Quantity</th>
+                                        </thead>
+                                        <tbody id="table_body">
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

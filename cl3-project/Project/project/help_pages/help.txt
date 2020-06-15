@@ -1,0 +1,15 @@
+index status code
+status codes
+0 just raised
+1 accepted by head
+2 accepted by admin
+3 issued
+4 rejected by head
+5 rejected by admin
+6 returned
+
+user code
+
+0 head
+1 user
+

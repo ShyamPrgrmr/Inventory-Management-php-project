@@ -1,0 +1,150 @@
+<html>
+    <head>
+            <title>Warehouse Management</title>
+            <link rel="stylesheet" href="../css/bootstrap.min.css">
+            <link rel="stylesheet" href="../css/warehouse.css">
+            <script src="../js/jquery.min.js"></script>
+            <script src="../js/bootstrap.min.js"></script>
+            <script src="../js/warehouse.js"></script>
+            <link rel="icon" href="../favicon.ico" type="image/x-icon"/>
+            <meta name="referrer" content="no-referrer"/>
+            <link rel="stylesheet" href="../css/for-all.css">
+            <meta charset="UTF-8"/>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <nav class="navbar fixed-top navbar-light bg-light">
+                    <a class="navbar-brand">Inventory Management</a>    
+            </nav>
+        </div>
+        <div class="container-fluid">
+            <div class="row h-100 main-row">
+                <div class="col-sm-6">
+                    <div class="row war-list left-row">
+                        <div class="col-sm-12">
+                            <div class="warehouse-list">
+                                   <div class="heading">
+                                       <h2>List of warehouses</h2>
+                                   </div>
+                                    
+                                    <div class="table-responsive">
+                                       <table class="table table-striped">
+                                           <thead>
+                                               <th>#</th>
+                                               <th>ID</th>
+                                               <th>Name</th>
+                                               <th>capacity(in kg)</th>
+                                               <th>No of racks</th>
+                                               <th>Material stores</th>
+                                               <th>Action</th>
+                                           </thead>
+                                           <tbody id="warehouse-table">
+                                               
+                                           </tbody>
+
+                                       </table>
+                                   </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="left-row">
+                            <div class="heading">
+                                <h3>Warehouse management</h3></div>
+                                    <div class="warehouse-form form-group">
+                                        <label for="ware-name">Name</label>
+                                        <input id="w-name" class="form-control">
+                                        <label for="ware-location">Location</label>
+                                        <input id="w-location" class="form-control">
+                                        <label for="ware-capacity">Capacity(in kg)</label>
+                                        <input id="w-capcity" class="form-control" disabled>
+                                        <label for="material">Material-store</label>
+                                        <select name="" id="w-material" class="form-control">
+                                                <option disabled>Select material will stores</option>
+                                                <option value="solid">Solid</option>
+                                                <option value="liquid">Liquid</option>
+                                                <option value="gas">Gas</option>
+                                                <option value="all">All</option>
+                                        </select>
+                                        <div class="button-group">
+                                                <button class="btn btn-success" onclick="save_warehouse();">save</button>
+                                        </div>
+                                        
+                                    
+                            </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="left-row">
+                            <div class="heading">
+                                <h3>The Rack management</h2>
+                            </div>
+                            <div class="rack-form form-group">
+                                <label for="rack-name">name</label>
+                                <input type="text" id="rack-name" class="form-control">
+                                <label for="rack-warehouse">Select warehouse</label>
+                                <select name="" id="rack-ware" class="form-control" onchange="rack_material_load(this.value)">
+                                    <option disabled>Select warehouse</option>
+                                </select>
+                                <label for="rack-capacity">Capacity(in kg)</label>
+                                <input class="form-control" id="rack-capacity">
+                                <label for="rack-warehouse">Material stores</label>
+                                <select name="" id="rack-mate" class="form-control">
+                                    <option disabled>Select material will stores</option>
+                                </select>
+                                <div class="button-group">
+                                        <button class="btn btn-success" onclick="rack_save();">save</button>
+
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 right-panel">
+                    <div class="row" >
+                        <div class="col-sm-12">
+                            <div class="racks-info left-row" style="height: 492px;">
+                                <div class="heading">
+                                    <h2>List of racks in W-100</h2>
+                                </div>
+                                 <div class="table-responsive">
+                                     <table class="table">
+                                         <thead>
+                                             <th>#</th>
+                                             <th>Rack ID</th>
+                                             <th>Warehouse ID</th>
+                                             <th>Name</th>
+                                             <th>Capacity(in kg)</th>
+                                             <th>Material stores</th>
+                                             <th>Action</th>
+                                         </thead>
+                                         <tbody id="rack-table">
+
+                                         </tbody>
+                                     </table>
+                                 </div>
+                                </div>
+                            </div>
+                        </div>
+                   
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="right-footer left-row">
+                                <small>inventory management<br>
+                                    
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

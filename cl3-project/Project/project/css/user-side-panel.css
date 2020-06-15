@@ -1,0 +1,65 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    width:100%;
+    height:100%;
+    background-image: linear-gradient(to right bottom,rgba(64, 223, 43, 0.63),rgba(64, 223, 43, 0.63)),url("image1.jpg");
+    background-position: top;
+    background-size:cover; 
+    position: relative;
+    background-position:top;
+    background-size: cover;
+    background-repeat: no-repeat; 
+    padding: 0px;
+    margin:0px;
+    font-family: 'Lato', sans-serif;
+}
+
+.inner-col{
+    margin: 5px;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: all .2s;
+    padding: 10px;
+}
+
+.inner-col:hover{
+    box-shadow: 0 0 8px #eee;
+}
+
+.heading{
+    text-align: center;
+}
+
+.caret{
+    padding: 0px;
+    box-shadow: none !important;
+    border: none !important;
+    float: right;
+    font-size: 20px;
+    transition:all .2s; 
+}
+
+.list-group-message{
+    display: inline;
+}
+
+.the-message{
+    font-size: 12px;
+}
+.message-content{
+    max-height: 95%;
+    overflow: scroll;
+}
+.main-row{
+    margin-top: 60px;
+    height:100vh;
+}
+
+.right-colum{
+    max-height: 450px;
+}

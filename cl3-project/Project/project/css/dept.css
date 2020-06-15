@@ -1,0 +1,112 @@
+body{
+    background-image: linear-gradient(to right bottom,rgba(64, 223, 43, 0.63),rgba(64, 223, 43, 0.63)),url("image1.jpg");
+    background-position: top;
+    background-size:cover; 
+}
+
+.heading{
+    text-align: center;
+}
+.right-panel{
+    padding-top: 10px;
+}
+
+.department-info{
+    padding: 10px;
+    border-radius:5px;
+    border:1px solid; 
+    background-color: #fff;
+    transition: all .2s;
+}
+
+.department-info:hover{
+    box-shadow: 0 0 10px #000;
+
+}
+
+.button-group{
+    margin:10px;
+    text-align: center; 
+}
+
+.btn:hover{
+    transform: translate(0,-7px);
+}
+
+
+.btn:active{
+    transform: translate(0,-4px);
+}
+
+.department-head-list{
+    padding: 10px;
+    border-radius:5px;
+    border:1px solid; 
+    background-color: #fff;
+    transition: all .2s;
+}
+
+.department-head-list:hover{
+    box-shadow: 0 0 10px #000;
+}
+
+.heading-head{
+    margin:20px;
+    text-align: center;
+}
+
+.left-panel{
+    padding-top:10px;
+}
+
+.right{
+    margin-top:68px;
+}
+
+.department-list{
+    padding: 10px;
+    border-radius:5px;
+    border:1px solid; 
+    background-color: #fff;
+    transition: all .2s;
+}
+
+.department-list:hover{
+    box-shadow: 0 0 10px #000;
+}
+
+.department-list-heading{
+    text-align: center;
+}
+
+.department-list-content{
+    height:300px;
+}
+
+.department-consumption{
+    height:250px;
+}
+
+.table{
+    
+    overflow-y: scroll;
+
+}
+
+.table-responsive{
+    max-height: 250px;
+}
+
+tbody{
+    font-size: 15px;
+}
+
+@keyframes onload_anim{
+    0%{
+        opacity: 0;
+    }
+    
+    100%{
+        opacity: 1;
+    }
+}

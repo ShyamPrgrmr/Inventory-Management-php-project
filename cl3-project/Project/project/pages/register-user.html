@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/heading-font.css">
+        <link rel="stylesheet" href="../css/register-user.css">
+        <link rel="stylesheet" href="../css/for-all.css">
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/register-user.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <link rel="icon" href="../favicon.ico">
+        <title>Register user</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <script type="text/script"></script>
+                <div class="col-sm-12">
+                    <div class="register-form form-group">
+                        <div class="heading"><h2>Registration form</h2></div>
+                        <label>Enter uid</label>
+                        <input type="text" class="form-control" onblur="checkuser(this.value);" id="uid">
+                        <label>Enter password</label>
+                        <input type="text" class="form-control" onblur="checkpassword(this.value)" id="password">
+                        <small style="color: grey">*Temporary password is provdided by admin</small>
+                        <label for="">Enter new password</label>
+                        <input class="form-control" type="text"/>
+                        <label for="">Retype password</label>
+                        <input class="form-control" type="text" id="new_password"/>
+                        <div class="btn-gr" style="margin-top:15px; margin-bottom: 15px;">
+                            <button class="btn form-control btn-primary no-anim" onclick="edit_user_password();">Save</button>
+                        </div>
+                        <div id="result">
+
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

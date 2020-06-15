@@ -1,0 +1,126 @@
+<html>
+    <head>
+        <title>Head Panel</title>
+        <link rel="stylesheet" href="../css/head-panel.css">
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/for-all.css">
+        <link rel="stylesheet" href="../css/heading-font.css">
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/head-panel.js"></script>
+        <link rel="icon" href="../favicon.ico">
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <nav class="navbar fixed-top navbar-light bg-light">
+                    <a class="navbar-brand">Inventory Management</a>    
+                </nav>
+            </div>
+            <div class="row main-row" style="height:85vh;">
+                <div class="col-sm-12 style-col">
+                <div class="heading"><h2>All Indents</h2></div>
+                <div class="table-responsive-sm">
+                        <table class="table table-striped table-bordered table-hover">
+                            <thead>
+                                <th>#</th>
+                                <th>Indent id</th>
+                                <th>Date</th>
+                                <th>User id</th>
+                                <th>User name</th>
+                                <th>Item id</th>
+                                <th>Item name</th>
+                                <th>Item description</th>
+                                <th>Item quantity</th>
+                                <th>Reason</th>
+                                <th colspan="2">Action</th>
+                            </thead>
+                            <tbody id="table_body">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+          <div class="modal fade" id="viewModal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header" style="background-color: #000;color: #fff">
+                  <h5 class="modal-title">Indent details</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: #fff">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <div class="view-indent form-group">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label for="indent-id">Indent id</label>
+                                <input type="text" class="form-control spe" id="inid" disabled>
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="user id">User id</label>
+                                <input type="text" class="form-control spe" id="inuid" disabled>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label>User name</label>
+                                <input type="text" class="form-control spe" id="inusername" disabled>
+                            </div>
+                            <div class="col-sm-6">
+                                <label>Department head id</label>
+                                <input type="text" class="form-control spe" id="inuserdept" disabled>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label>Department id</label>
+                                <input type="text" class="form-control spe" id="inuserhead" disabled>
+                            </div>
+                            <div class="col-sm-6">
+                                <label>Item id</label>
+                                <input type="text" class="form-control spe" id="initemid" disabled>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label>Item name</label>
+                                <input type="text" class="form-control spe" id="initemname" disabled>
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="">Item quantity</label>
+                                <input type="text" class="form-control spe" id="initemqty" disabled>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label for="">Item hazard</label>
+                                <textarea type="text" id="initemhazard" class="form-control spe" disabled></textarea>
+                            </div>
+                            <div class="col-sm-6">
+                                <label>Item details</label>
+                                <textarea type="text" name="" id="initemdesc" class="form-control spe" disabled></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label>Reason</label>
+                                <textarea name="" disabled id="inreason" class="form-control spe" style="resize:none;">  </textarea>
+                            </div>
+                            <div class="col-sm-6">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" style="background-color: #000;color: #fff;">
+                  <button type="button" class="btn btn-danger no-anim" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+    </body>
+</html>

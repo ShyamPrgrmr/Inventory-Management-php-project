@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <title>Item management</title>
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/item_master.css">
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/item_master.js"></script>
+        <link rel="icon" href="../favicon.ico" type="image/x-icon"/>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="../css/heading-font.css">
+        <link rel="stylesheet" href="../css/for-all.css">
+    </head>
+    <body>
+
+        <div class="container-fluid">
+            <div class="row">
+                <nav class="navbar fixed-top navbar-light bg-light">
+                    <a class="navbar-brand">Inventory Management</a>    
+                </nav>
+            </div>
+            <div class="row main-row">
+                <div class="col-sm-5">
+                    <div class="row">
+                        <div class="col-sm-12 item-management block">
+                            <div class="heading">
+                                <h2>Item Management</h2>
+                            </div>
+                            <div class="item-management-content">
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-sm-7">
+                                            <label for="it-name">Name of item</label>
+                                            <input type="text" name="it-name" id="name" class="form-control" placeholder="Name of item"/>
+                                            <input type="text" id="iid" hidden/>
+                                        </div>
+                                        <div class="col-sm-5">
+                                            <label for="it-state" style="transition: all .2s;">Physical State of item</label>
+                                            <select class="form-control" id="state">
+                                                <option value="solid">Solid</option>
+                                                <option value="liquid">Liquid</option>
+                                                <option value="gas">Gas</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <label for="it-desc">Item description</label>
+                                            <textarea placeholder="Add description about item" id='desc' style="height:60px; resize: none;" class="form-control"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <label for="it-dom">Date of Manufacture</label>
+                                            <input type="date" class="form-control" name="it-dom" id="dom"/>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label for="it-dom">Date of Expiry</label>
+                                            <input type="date" class="form-control" name="it-dom" id="doe"/>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <label for="it-man">Manufacturer name</label>
+                                            <input type="text" class="form-control" name="it-man" placeholder="Manufaturer name" id="man"/>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <label for="it-hazard">Hazards</label>
+                                            <textarea class="form-control" style="resize: none;height: 60px;" placeholder="Any hazard of using item" id="hazard"></textarea>
+                                            <small style="color:lightgrey;">*If there is no hazards then type no hazard</small>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="btn-gr">
+                                                <button class="btn btn-success btn-md" onclick="save_item();">Save</button>
+                                                <button class="btn btn-primary btn-md" onclick="edit_item();">Edit</button>
+                                                <button class="btn btn-danger btn-md" onclick="delete_item();">Delete</button>
+                                                <button class="btn btn-md btn-info" onclick="clear_feild();">Clear</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-7">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="store block">
+                                <div class="heading">
+                                    <h2>List of items</h2>
+                                </div>
+                                <div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <input type="text" class="form-control" onkeydown="search_item(this.value);" placeholder="Search by using id or name"/>
+                                        </div>
+                                    </div>
+                                    <div class="table-responsive">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <th>#</th>
+                                            <th>Id</th>
+                                            <th>Item name</th>
+                                            <th>DOM</th>
+                                            <th>DOE</th>
+                                            <th>State</th>
+                                            <th>Action</th>
+                                        </thead>
+                                        <tbody id="list-table">
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+        </div>
+    </body>
+</html>
